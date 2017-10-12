@@ -20,7 +20,7 @@ public class PTra07_04 {
 
 
 		// ★ 0～51の中からランダムで値を取得して、変数indexに代入してください
-		int index = (int)(Math.random()*52);
+		int index = new java.util.Random().nextInt(51);
 
 
 		// ★ 配列trumpのindex番目の中に入っている数字を出力してください
