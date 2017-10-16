@@ -22,6 +22,7 @@ public class PTra10_01 {
 	 * 		なし
 	 */
 
+
 	public static void main(String[] args) {
 
 		// Userクラスを作成後に着手してください
@@ -31,6 +32,9 @@ public class PTra10_01 {
 
 
 		// ★ 変数usに格納されているインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
+		User us;
+		us = new User();
+		System.out.println(us);
 
 	}
 }
