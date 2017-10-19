@@ -17,7 +17,12 @@ public class PTra10_06 {
 		/*
 		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
 		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
+		 *
 		 */
+		Car[] car;
+		car = new car[3]
+
+
 		Car car1 = new Car();
 		car1.color = "赤";
 		car1.gasoline = 50;
