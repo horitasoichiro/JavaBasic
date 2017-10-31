@@ -18,7 +18,7 @@ public class PTra12_01 {
 		 * ★ 下記、インスタンスフィールドへのアクセスをアクセサ経由に変更してください
 		 */
 		Student student = new Student();
-		student.studentId = 10001;
+		student.setStudentId = 10001;
 		student.studentName = "リゾーム太郎";
 		student.companyName = "株式会社リゾーム";
 		student.className = "Z教室";
