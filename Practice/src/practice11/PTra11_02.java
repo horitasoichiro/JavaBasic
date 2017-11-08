@@ -6,7 +6,7 @@ public class PTra11_02 {
 		// ★ ReadFileClassのクラスメソッドreadBookDataFile()を使い、本情報を取得します
 		Book[] books;
 		books = FileReaderClass.readBookDataFile();
-		System.out.println(books[1].title);
+//		System.out.println(books[1].title);
 
 		System.out.println("探したい本のタイトル（又はその一部）を入力してください");
 
