@@ -22,28 +22,34 @@ public class PTra13_04 {
 		Slime slime = new Slime();
 		hero.setName("勇者");
 		slime.setName("スライム");
-
-
+		String win = null;
+		String loose = null;
 
 		/*
 		 * ★ HeroとSlimeを、どちらかが体力０になるまで戦わせます
 		 *
-		 * 	●Heroの攻撃 -> ダメージ判定 -> Slimeの攻撃 -> ダメージ判定
-		 * 上記を繰り返し行います
+		 * ●Heroの攻撃 -> ダメージ判定 -> Slimeの攻撃 -> ダメージ判定 上記を繰り返し行います
 		 */
-		if(hero.damage(slime.attack())==true) {
-			System.out.println("ヒーロー死亡");
-		}else if(slime.damage(hero.attack())==true) {
-			System.out.println("スライム死亡");
 
-		}else {
-			continue;
+		while (true) {
+			if (slime.damage(hero.attack()) == true) {
+
+				win = (hero.getName());
+				loose = (slime.getName());
+				break;
+			}
+			if (hero.damage(slime.attack()) == true) {
+
+				win = (slime.getName());
+				loose = (hero.getName());
+				break;
+			} else {
+				continue;
+			}
+
+			// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
+
 		}
-
-
-
-
-		// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
-
+		System.out.println(win + "は" + loose + "との戦闘に勝利した");
 	}
 }
