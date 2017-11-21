@@ -11,14 +11,14 @@ public class Employee extends Person {
 		this.departmentNm = departmentNm;
 	}
 
-	private int departmentNm1;
+	private int departmentCnt;
 
-	public int getDepartmentNm1() {
-		return departmentNm1;
+	public int getDepartmentCnt() {
+		return departmentCnt;
 	}
 
-	public void setDepartmentNm(int departmentNm1) {
-		this.departmentNm1 = departmentNm1;
+	public void setDepartmentCnt(int departmentCnt) {
+		this.departmentCnt = departmentCnt;
 	}
 
 }
