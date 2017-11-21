@@ -22,4 +22,5 @@ public interface Course {
 	 * @return
 	 */
 	String[] getCourseUnit();
+
 }
