@@ -13,7 +13,7 @@ public class PTra13_08 {
 	 *
 	 * フィールド
 	 * 		departmentNm（部署名）		:	String
-	 * 		departmentCnt（部署人数）	:	int
+	 * 		departmentNm（部署人数）	:	int
 	 * メソッド
 	 * 		各フィールドのアクセサ
 	 */

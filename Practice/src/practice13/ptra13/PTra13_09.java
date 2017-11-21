@@ -6,6 +6,8 @@
  */
 package practice13.ptra13;
 
+import practice13.common.Employee;
+
 public class PTra13_09 {
 
 	/*
@@ -31,7 +33,19 @@ public class PTra13_09 {
 	 * エントリーポイント
 	 * @param args
 	 */
+	static Employee[] emp = new Employee[NAMEDATA.length];
 	public static void main(String[] args) {
+		for(int i = 0 ;i<NAMEDATA.length;i++) {
+
+			emp[i].setUserNm(NAMEDATA[i]);
+			emp[i].setMail(MAILDATA[i]);
+			emp[i].setPassword(PASSDATA[i]);
+
+
+
+
+		}
+		System.out.println(emp[0].getPassword());
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
 
