@@ -12,9 +12,17 @@ public class PTra17_04 {
 		String str = "スッキリわかるJava入門";
 
 		/*
-		 * ★ strに入っている文字列を1文字ずつゆっくり表示させるプログラムを完成させてください
-		 * ※ Thread.sleep を使用すること
+		 * ★ strに入っている文字列を1文字ずつゆっくり表示させるプログラムを完成させてください ※ Thread.sleep を使用すること
 		 */
+		char data[] = str.toCharArray();
+
+		for (int i = 0; i < data.length; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+			}
+			System.out.print(data[i]);
+		}
 
 	}
 }
