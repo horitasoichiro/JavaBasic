@@ -9,7 +9,7 @@ package practice18;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Collections;
 import java.util.Scanner;
 
 import practice18.entity.Player;
@@ -23,16 +23,15 @@ public class PTra18_04 {
 	public static void main(String[] args) {
 
 		/*
-		 * ①
-		 * ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください
-		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
+		 * ① ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください ★
+		 * ArrayListを作成して、Playerインスタンスを格納してください
 		 */
-		ArrayList<Player>array=new ArrayList<Player>();
+		ArrayList<Player> array = new ArrayList<Player>();
 
-		try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))){
-			while(scanner.hasNext()) {
+		try (Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+			while (scanner.hasNext()) {
 				String line = scanner.nextLine();
-				String[] pline = line.split(",",0);
+				String[] pline = line.split(",", 0);
 				Player player = new Player();
 
 				player.setPosition(pline[0]);
@@ -43,28 +42,60 @@ public class PTra18_04 {
 				array.add(player);
 			}
 		} catch (FileNotFoundException e) {
-		e.printStackTrace();
+			e.printStackTrace();
 		}
 
-
-
 		// ★ ①のArrayListの中からGK1名、DF4名、MF4名, FW2名をランダムで出力してください
-		for(int i =array.size()-1; i>0;i--) {
 
-			  Random rnd = new Random();
+		ArrayList<Player> arrayGK = new ArrayList<Player>();
+		ArrayList<Player> arrayDF = new ArrayList<Player>();
+		ArrayList<Player> arrayMF = new ArrayList<Player>();
+		ArrayList<Player> arrayFW = new ArrayList<Player>();
 
-		        int ran = rnd.nextInt(array.size());
+		int numGK = 0;
+		int numDF = 0;
+		int numMF = 0;
+		int numFW = 0;
 
-			String str = array.get(ran).getPosition();
-			if(str.equals("GK")) {
+		Collections.shuffle(array);
 
-				System.out.println(array.get(ran).toString());
+		for (int i = 0; i < array.size(); i++) {
 
+			String str = array.get(i).getPosition();
+
+			if (str.equals("GK") && numGK < 1) {
+				arrayGK.add(array.get(i));
+				numGK++;
+			}
+			else if (str.equals("DF") && numDF < 4) {
+				arrayDF.add(array.get(i));
+				numDF++;
+			}
+			else if (str.equals("MF") && numMF < 4) {
+				arrayMF.add(array.get(i));
+				numMF++;
+			}
+			else if (str.equals("FW") && numFW < 2) {
+				arrayFW.add(array.get(i));
+				numFW++;
 			}
 		}
 
+//		array.stream().filter((player) -> {return player.getPosition().equals("DF");})
+//		.forEach((player) -> { System.out.println(player.toString()); });
 
-
+		for (Player player : arrayGK) {
+			System.out.println(player.toString());
+		}
+		for (Player player : arrayDF) {
+			System.out.println(player.toString());
+		}
+		for (Player player : arrayMF) {
+			System.out.println(player.toString());
+		}
+		for (Player player : arrayFW) {
+			System.out.println(player.toString());
+		}
 
 	}
 }
