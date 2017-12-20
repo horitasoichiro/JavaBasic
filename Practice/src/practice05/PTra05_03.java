@@ -55,13 +55,16 @@ public class PTra05_03 {
 				break;
 			case "海":
 				ocean = ocean + 1;
+				break;
+			default :
+				System.out.println("無効票です");
 
 			}
 
 
 
 			// ★ 変数indexに1を足して、変数indexに代入してください
-			index = index + 1;
+			index++;
 
 		}
 

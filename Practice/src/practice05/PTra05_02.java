@@ -36,7 +36,7 @@ public class PTra05_02 {
 			break;
 		default:
 			System.out.println(input+"は奇数です");
-			break;
+
 		 }
 
 
