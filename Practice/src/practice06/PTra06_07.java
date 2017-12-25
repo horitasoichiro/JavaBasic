@@ -24,23 +24,7 @@ public class PTra06_07 {
 		 * ■■□□□
 		 * ■□□□□
 		 */
-//		char bb = '■';
-//		char wb = '□';
-//
-//		for(int r=0;r<2;r++) {
-//
-//		for(int i=0; i<5; i++) {
-//			for(int b=0; b<i ;b++)
-//				System.out.print(bb);
-//				for(int w=5;w>i;w--)
-//					System.out.print(wb);
-//				System.out.println("");
-//		}
-//			char bb = '□';
-//			char wb = '■';
-//
-//
-//		}
+
 
 		for(int i=0; i<5; i++) {
 			for(int b=0; b<i ;b++)

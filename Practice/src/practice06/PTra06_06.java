@@ -21,7 +21,8 @@ public class PTra06_06 {
 		 */
 		for(int i=0; i<5;i++) {
 			for(int b=0; b<i;b++)
-			System.out.print("■");
+				System.out.print("■");
+			
 			for(int w=5;w>i;w--) 
 				System.out.print("□");
 			System.out.println("");

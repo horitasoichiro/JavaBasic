@@ -50,17 +50,15 @@ public class PTra10_05 {
 		for (int i = 0; advanceSum < distance; i++) {
 			advance = car.run();
 			advanceSum = advanceSum + advance;
-			// System.out.println(advance);
-			// System.out.println(advanceSum);
-			// System.out.println(car.gasoline);
+
 			if (advanceSum > distance) {
 				System.out.println("目的地まで" + i + "時間かかりました。残りのガソリンは、" + car.gasoline + "リットルです");
-				break;
+
 			}
 
-			if (advance == -1) {
+			else if (advance == -1) {
 				System.out.println("目的地まで到達できませんでした");
-				break;
+
 
 			}
 

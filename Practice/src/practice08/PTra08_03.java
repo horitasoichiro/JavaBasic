@@ -11,7 +11,7 @@ public class PTra08_03 {
 
 		// ★ 0～100のランダムな値を取得して、変数numberに代入してください
 
-		int number = new java.util.Random().nextInt(100);
+		int number = new java.util.Random().nextInt(101);
 
 
 
@@ -38,9 +38,11 @@ public class PTra08_03 {
 	 * 引数で渡された内容が偶数ならtrue、奇数ならfalseを返すメソッド
 	 */
 	public static boolean isEvenNumber(int x) {
-		boolean result;
-		result = (x % 2 == 0);
-		 return result;
+
+		if(x % 2 == 0) {
+			return true;
+		}
+		 return false;
 
 	}
 }
