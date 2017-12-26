@@ -65,7 +65,8 @@ public class PTra18_02 {
 		e.printStackTrace();
 		}
 		for(Player player :array) {
-			System.out.println(player.toString());
+			String line=player.toString();
+			System.out.println(line.replaceAll(",", "\n"));
 		}
 	}
 }

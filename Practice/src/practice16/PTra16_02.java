@@ -10,29 +10,30 @@ public class PTra16_02 {
 	public static void main(String[] args) {
 
 		boolean b = true;
-		Boolean ob = new Boolean(b);
+		Boolean ob = b;
 
 		byte by = 100;
-		Byte oby = new Byte(by);
+		Byte oby = by;
 
 		short s = 300;
-		Short os = new Short(s);
+		Short os = s;
 
 		char c = '日';
-		Character oc = new Character(c);
+		Character oc = c;
 
 		int i = 1000;
-		Integer oi = new Integer(i);
+		Integer oi = i;
 
 		long l = 2000L;
-		Long ol = new Long(l);
+		Long ol = l;
 
 		float f = 3.14F;
-		Float of = new Float(f);
+		Float of = f;
 
 		double d = 453.592;
-		Double od = new Double(d);
+		Double od = d;
 
 		// ★ 上記基本型を、それぞれのラッパークラスに代入してください
+
 	}
 }

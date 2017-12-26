@@ -31,9 +31,10 @@ public class PTra13_09 {
 	 *
 	 * @param args
 	 */
-	static Employee[] emp = new Employee[NAMEDATA.length];
+
 
 	public static void main(String[] args) {
+		Employee[] emp = new Employee[NAMEDATA.length];
 		for (int i = 0; i < NAMEDATA.length; i++) {
 			emp[i] = new Employee();
 			emp[i].setUserNm(NAMEDATA[i]);
@@ -42,6 +43,13 @@ public class PTra13_09 {
 			emp[i].setDepartmentNm(QUATERDATA[0][i]);
 			emp[i].setDepartmentCnt(Integer.parseInt(QUATERDATA[1][i]));
 
+		}
+		for(Employee emps : emp) {
+			System.out.println("名前:"+emps.userNm);
+			System.out.println("メールアドレス:"+emps.mail);
+			System.out.println("パスワード:"+emps.password);
+			System.out.println("部署名:"+emps.getDepartmentNm());
+			System.out.println("部署人数:"+emps.getDepartmentCnt());
 		}
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください

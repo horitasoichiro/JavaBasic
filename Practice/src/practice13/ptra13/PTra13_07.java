@@ -49,11 +49,6 @@ public class PTra13_07 {
 				win = slime.getName();
 				loose = superhero.getName();
 				break;
-			} else {
-				System.out.println(superhero.showParameter());
-				System.out.println(slime.showParameter());
-
-				continue;
 			}
 		}
 

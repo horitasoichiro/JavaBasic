@@ -38,47 +38,46 @@ public class PTra10_06 {
 		}
 
 		final int distance = 100;
-//		int[] count = new int[cars.length];
-//		for (int i = 0; i < cars.length; i++) {
-//			int move = 0;
-//			while (distance - move > 0) {
-//				int ret = cars[i].run();
-//				if (ret == -1) {
-//					count[i] = -1;
-//					break;
-//				}
-//				move += ret;
-//				count[i]++;
-//			}
-//		}
-//
-//		for(int i=0;i<cars.length;i++) {
-//			if(count[i]==-1) {
-//				System.out.println((i+1)+"台目は到達できませんでした");
-//			}else {
-//				System.out.println((i+1)+"台目の掛かった時間:"+count[i]+"時間");
-//				System.out.println("残りのガソリンは、"+ cars[i].gasoline +"リットルです");
-//			}
-//
-//		}
-		 for (int i = 0; i < cars.length; i++) {
-		 int advance = 0;
-		 int advanceSum = 0;
-		 for (int n = 0; advanceSum < distance; n++) {
-		 advance = cars[i].run();
-		 advanceSum = advanceSum + advance;
-		 if (advanceSum > distance) {
-		 System.out.println(
-		 cars[i].color + "色の車は目的地にまで" + n + "時間かかりました。残りのガソリンは、" + cars[i].gasoline +
-		 "リットルです");
-		 }
-		 if (advance == -1) {
-		 System.out.println(cars[i].color + "色の車は目的地まで到着できませんでした。");
-		 break;
-		 }
+		// int[] count = new int[cars.length];
+		// for (int i = 0; i < cars.length; i++) {
+		// int move = 0;
+		// while (distance - move > 0) {
+		// int ret = cars[i].run();
+		// if (ret == -1) {
+		// count[i] = -1;
+		// break;
+		// }
+		// move += ret;
+		// count[i]++;
+		// }
+		// }
+		//
+		// for(int i=0;i<cars.length;i++) {
+		// if(count[i]==-1) {
+		// System.out.println((i+1)+"台目は到達できませんでした");
+		// }else {
+		// System.out.println((i+1)+"台目の掛かった時間:"+count[i]+"時間");
+		// System.out.println("残りのガソリンは、"+ cars[i].gasoline +"リットルです");
+		// }
+		//
+		// }
+		for (int i = 0; i < cars.length; i++) {
+			int advance = 0;
+			int advanceSum = 0;
+			for (int n = 0; advanceSum < distance; n++) {
+				advance = cars[i].run();
+				advanceSum = advanceSum + advance;
+				if (advanceSum > distance) {
+					System.out.println(
+							cars[i].color + "色の車は目的地にまで" + n + "時間かかりました。残りのガソリンは、" + cars[i].gasoline + "リットルです");
+				}
+				if (advance == -1) {
+					System.out.println(cars[i].color + "色の車は目的地まで到着できませんでした。");
+					break;
+				}
 
-		 }
-		 }
+			}
+		}
 
 	}
 }
